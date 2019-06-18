@@ -1,0 +1,2716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>105</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">Voltage
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="caCircularGauge" name="Voltage">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>240</y>
+      <width>230</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voltage&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Voltage
+</string>
+    </property>
+    <property name="alarmLimits">
+     <enum>EAbstractGauge::Channel_Alarms</enum>
+    </property>
+    <property name="colorMode">
+     <enum>EAbstractGauge::COLORBAR</enum>
+    </property>
+    <property name="externalScale">
+     <bool>true</bool>
+    </property>
+    <property name="logarithmicScale">
+     <bool>false</bool>
+    </property>
+    <property name="valueFormat">
+     <string>%.0f</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:vmon</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>0</y>
+      <width>20</width>
+      <height>750</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>30</y>
+      <width>851</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>0</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>sTGC Module 1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>0</y>
+      <width>260</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>sTGC Module 2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>430</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Voltage (V)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>400</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Current (μA)</string>
+    </property>
+   </widget>
+   <widget class="caMessageButton" name="camessagebutton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>On</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+    <property name="background">
+     <color alpha="150">
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="disabledForeground">
+     <color alpha="150">
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="pressMessage">
+     <string notr="true">1</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>610</y>
+      <width>121</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setMaxVol</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Demand Voltage (V)</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>550</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ramp Up (V/s)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>550</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ramp Down (V/s)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>680</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trip Current (μA)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>680</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trip Time (s)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Max Voltage (V)</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setVol</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>480</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setRampUp</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_5">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>480</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setRampDown</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>610</y>
+      <width>121</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setTripTime</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_7">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>610</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setTripI</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>400</y>
+      <width>90</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="background">
+     <color alpha="0">
+      <red>0</red>
+      <green>85</green>
+      <blue>255</blue>
+     </color>
+    </property>
+   </widget>
+   <widget class="caCircularGauge" name="cacirculargauge">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>260</y>
+      <width>160</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="colorMode">
+     <enum>EAbstractGauge::GRADIENT</enum>
+    </property>
+    <property name="externalScale">
+     <bool>true</bool>
+    </property>
+    <property name="valueFormat">
+     <string>%.2f</string>
+    </property>
+    <property name="numMajorTicks">
+     <number>11</number>
+    </property>
+    <property name="numMinorTicks">
+     <number>5</number>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:imon</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>170</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>170</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>80</y>
+      <width>41</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ON</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_3">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>110</y>
+      <width>51</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OFF</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_5">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>170</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ramp Down</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_6">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>200</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Internal Trip</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>80</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>550</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_4">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>550</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caMessageButton" name="camessagebutton_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>50</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Off</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOff</string>
+    </property>
+    <property name="background">
+     <color alpha="150">
+      <red>232</red>
+      <green>0</green>
+      <blue>3</blue>
+     </color>
+    </property>
+    <property name="disabledForeground">
+     <color alpha="150">
+      <red>171</red>
+      <green>32</green>
+      <blue>39</blue>
+     </color>
+    </property>
+    <property name="pressMessage">
+     <string notr="true">1</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_5">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>170</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>170</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caGraphics::Static</enum>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOff</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_6">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>40</y>
+      <width>191</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_7">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>40</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>STATUS</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_7">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>110</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=0</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_8">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>140</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=3</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_9">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>170</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=5</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_10">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>201</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=512</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_14">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>680</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_15">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_16">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>171</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ramp Up</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>550</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ramp Down (V/s)</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_9">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>40</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>STATUS</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_17">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_18">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>80</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_4">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>110</y>
+      <width>51</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>OFF</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caMessageButton" name="camessagebutton_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>50</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>On</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setOn</string>
+    </property>
+    <property name="background">
+     <color alpha="150">
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="disabledForeground">
+     <color alpha="150">
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="pressMessage">
+     <string notr="true">1</string>
+    </property>
+   </widget>
+   <widget class="caMessageButton" name="camessagebutton_4">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>50</y>
+      <width>60</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Off</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setOff</string>
+    </property>
+    <property name="background">
+     <color alpha="150">
+      <red>232</red>
+      <green>0</green>
+      <blue>3</blue>
+     </color>
+    </property>
+    <property name="disabledForeground">
+     <color alpha="150">
+      <red>171</red>
+      <green>32</green>
+      <blue>39</blue>
+     </color>
+    </property>
+    <property name="pressMessage">
+     <string notr="true">1</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_19">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>170</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>170</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>0</y>
+      <width>20</width>
+      <height>750</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>400</y>
+      <width>120</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Current (μA)</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_10">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>170</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ramp Down</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>680</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trip Current (μA)</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_8">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>150</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setVol</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_20">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>120</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_11">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>80</y>
+      <width>41</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ON</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caCircularGauge" name="Voltage_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>240</y>
+      <width>230</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voltage&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Voltage
+</string>
+    </property>
+    <property name="alarmLimits">
+     <enum>EAbstractGauge::Channel_Alarms</enum>
+    </property>
+    <property name="colorMode">
+     <enum>EAbstractGauge::COLORBAR</enum>
+    </property>
+    <property name="externalScale">
+     <bool>true</bool>
+    </property>
+    <property name="logarithmicScale">
+     <bool>false</bool>
+    </property>
+    <property name="valueFormat">
+     <string>%.0f</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:vmon</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_9">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>610</y>
+      <width>121</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setTripTime</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_2">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>610</y>
+      <width>121</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setMaxVol</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_21">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>170</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=5</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_22">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>680</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_23">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>201</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>255</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=512</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caCircularGauge" name="cacirculargauge_2">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>260</y>
+      <width>160</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="colorMode">
+     <enum>EAbstractGauge::GRADIENT</enum>
+    </property>
+    <property name="externalScale">
+     <bool>true</bool>
+    </property>
+    <property name="valueFormat">
+     <string>%.2f</string>
+    </property>
+    <property name="numMajorTicks">
+     <number>11</number>
+    </property>
+    <property name="numMinorTicks">
+     <number>5</number>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:imon</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_12">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>200</y>
+      <width>151</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Internal Trip</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_25">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>140</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=3</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_10">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>610</y>
+      <width>130</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setTripI</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_13">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>140</y>
+      <width>171</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ramp Up</string>
+    </property>
+    <property name="visibility">
+     <enum>caLabel::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:status</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_26">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>550</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>110</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Demand Voltage (V)</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>430</y>
+      <width>101</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Voltage (V)</string>
+    </property>
+   </widget>
+   <widget class="caLabel" name="calabel_14">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>400</y>
+      <width>90</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="background">
+     <color alpha="0">
+      <red>0</red>
+      <green>85</green>
+      <blue>255</blue>
+     </color>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Max Voltage (V)</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_27">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>170</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>170</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caGraphics::Static</enum>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setOff</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_28">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>40</y>
+      <width>191</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_11">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>480</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setRampDown</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_29">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>550</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>550</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ramp Up (V/s)</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_30">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>110</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>0</red>
+      <green>255</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::Calc</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=0</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:status</string>
+    </property>
+    <property name="form">
+     <enum>caGraphics::Circle</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>680</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trip Time (s)</string>
+    </property>
+   </widget>
+   <widget class="caGraphics" name="cagraphics_31">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>680</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="fillstyle" stdset="0">
+     <enum>caGraphics::Filled</enum>
+    </property>
+    <property name="lineSize">
+     <number>1</number>
+    </property>
+    <property name="lineColor">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="visibility">
+     <enum>caGraphics::StaticV</enum>
+    </property>
+    <property name="visibilityCalc">
+     <string notr="true">A=1</string>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:3:0:setOn</string>
+    </property>
+   </widget>
+   <widget class="caNumeric" name="canumeric_12">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>480</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">sTGC:7:0:setRampUp</string>
+    </property>
+    <property name="foreground">
+     <color>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+     </color>
+    </property>
+    <property name="background">
+     <color>
+      <red>178</red>
+      <green>179</green>
+      <blue>255</blue>
+     </color>
+    </property>
+    <property name="limitsMode">
+     <enum>caNumeric::Channel</enum>
+    </property>
+    <property name="maxValue">
+     <double>2000.000000000000000</double>
+    </property>
+    <property name="minValue">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="styleSheet" stdset="0">
+     <string notr="true">background: rgb(178, 179, 255, 255); color: rgb(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <zorder>cagraphics_26</zorder>
+   <zorder>cagraphics_22</zorder>
+   <zorder>cagraphics_31</zorder>
+   <zorder>cagraphics_27</zorder>
+   <zorder>cagraphics_19</zorder>
+   <zorder>cagraphics_28</zorder>
+   <zorder>cagraphics_16</zorder>
+   <zorder>cagraphics_15</zorder>
+   <zorder>cagraphics_14</zorder>
+   <zorder>cagraphics_11</zorder>
+   <zorder>cagraphics_6</zorder>
+   <zorder>cagraphics_5</zorder>
+   <zorder>cagraphics_4</zorder>
+   <zorder>cagraphics_3</zorder>
+   <zorder>cagraphics</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>camessagebutton</zorder>
+   <zorder>line_2</zorder>
+   <zorder>canumeric</zorder>
+   <zorder>label_11</zorder>
+   <zorder>label_12</zorder>
+   <zorder>label_13</zorder>
+   <zorder>label_14</zorder>
+   <zorder>label_15</zorder>
+   <zorder>canumeric_3</zorder>
+   <zorder>canumeric_4</zorder>
+   <zorder>canumeric_5</zorder>
+   <zorder>canumeric_6</zorder>
+   <zorder>canumeric_7</zorder>
+   <zorder>Voltage</zorder>
+   <zorder>calabel</zorder>
+   <zorder>cacirculargauge</zorder>
+   <zorder>calabel_2</zorder>
+   <zorder>calabel_3</zorder>
+   <zorder>calabel_5</zorder>
+   <zorder>calabel_6</zorder>
+   <zorder>cagraphics_2</zorder>
+   <zorder>camessagebutton_2</zorder>
+   <zorder>calabel_7</zorder>
+   <zorder>cagraphics_7</zorder>
+   <zorder>cagraphics_8</zorder>
+   <zorder>cagraphics_9</zorder>
+   <zorder>cagraphics_10</zorder>
+   <zorder>calabel_8</zorder>
+   <zorder>label_16</zorder>
+   <zorder>calabel_9</zorder>
+   <zorder>cagraphics_17</zorder>
+   <zorder>cagraphics_18</zorder>
+   <zorder>calabel_4</zorder>
+   <zorder>camessagebutton_3</zorder>
+   <zorder>camessagebutton_4</zorder>
+   <zorder>line_3</zorder>
+   <zorder>label_8</zorder>
+   <zorder>calabel_10</zorder>
+   <zorder>label_17</zorder>
+   <zorder>canumeric_8</zorder>
+   <zorder>cagraphics_20</zorder>
+   <zorder>calabel_11</zorder>
+   <zorder>Voltage_2</zorder>
+   <zorder>canumeric_9</zorder>
+   <zorder>canumeric_2</zorder>
+   <zorder>cagraphics_21</zorder>
+   <zorder>cagraphics_23</zorder>
+   <zorder>cacirculargauge_2</zorder>
+   <zorder>calabel_12</zorder>
+   <zorder>cagraphics_25</zorder>
+   <zorder>canumeric_10</zorder>
+   <zorder>calabel_13</zorder>
+   <zorder>label_10</zorder>
+   <zorder>calabel_14</zorder>
+   <zorder>label_18</zorder>
+   <zorder>canumeric_11</zorder>
+   <zorder>cagraphics_29</zorder>
+   <zorder>label_19</zorder>
+   <zorder>cagraphics_30</zorder>
+   <zorder>label_20</zorder>
+   <zorder>canumeric_12</zorder>
+   <zorder>line</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_9</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>caNumeric</class>
+   <extends>QFrame</extends>
+   <header>caNumeric</header>
+  </customwidget>
+  <customwidget>
+   <class>caMessageButton</class>
+   <extends>QPushButton</extends>
+   <header>caMessageButton</header>
+  </customwidget>
+  <customwidget>
+   <class>caLabel</class>
+   <extends>QLabel</extends>
+   <header>caLabel</header>
+  </customwidget>
+  <customwidget>
+   <class>caGraphics</class>
+   <extends>QWidget</extends>
+   <header>caGraphics</header>
+  </customwidget>
+  <customwidget>
+   <class>caCircularGauge</class>
+   <extends>QWidget</extends>
+   <header>caGauge</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
